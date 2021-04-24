@@ -2,7 +2,7 @@
 The goal of this project is to compare two annotation files.  The Swine Genome Sequencing Consortium (SGSC) has released *Sus scrofa* assembly 11.1.  The Ensembl and NCBI gene annotation files of this assembly will be compared.  The pig genome is not well annotated and there are many genes that do not have any names.  This will highlight the importance of gene annotation selection which will have a great impact on downstream applications such as differential gene expression.
 
 ## Details
-The NCBI and Ensembl gene annotation files are downloaded.  The upload_annotation.py will read in both annotation files, parse them and create new tables in the ktodd8 MySQL database.  A user will then be given a link to an html form to fill out and specify the desired information when comparing the two gene annotation files.  The form contents will be sent to the XXX.cgi script.  The script will connect to the MySQL database and query the two gene annotation files.  The results will be displayed in the XXX.html template.
+The NCBI and Ensembl gene annotation files are downloaded.  The **upload_annotation.py** script will read in both annotation files, parse them and create new tables in the ktodd8 MySQL database.  The **user_input.html** form will prompt a user to specify the desired information when comparing the two gene annotation files.  The form contents will be sent to the **XXX.cgi** script.  This script will connect to the MySQL database, query the two gene annotation files and report statistics.  The results will be displayed using the **results.html** template.
 
 1. Download *Sus scrofa* gene annotation files from Ensembl and NCBI.
 ```
