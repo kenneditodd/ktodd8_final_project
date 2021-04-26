@@ -10,7 +10,7 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/003/025/GCF_000003025.6_Ss
 wget http://ftp.ensembl.org/pub/release-103/gff3/sus_scrofa/Sus_scrofa.Sscrofa11.1.103.gff3.gz
 gunzip *.gz
 ```
-2. Download four scripts/templates:
+2. Download the following scripts/templates:
       - upload_annotation.py
       - user_input.html
       - XXX.cgi
