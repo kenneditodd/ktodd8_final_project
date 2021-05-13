@@ -90,6 +90,7 @@ for item in NCBI_genes:
     gbkey = re.findall(r'gbkey=(.*?);', attributes)[0]
     gene = re.findall(r'gene=(.*?);', attributes)[0]
     gene_biotype = re.findall(r'gene_biotype=(.*)', attributes)[0]
+    gene_biotype = gene_biotype.split(';')[0]
     description = re.findall(r'description=(.*?);', attributes)
     if len(description) == 0:
         description = "NA"
