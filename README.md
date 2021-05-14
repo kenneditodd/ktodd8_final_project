@@ -12,10 +12,12 @@ gunzip *.gz
 ```
 2. Download the following scripts/templates:
       - upload_annotation.py
-      - user_input.html
+      - form.html
       - XXX.cgi
       - results.html
-4. Run the script upload_annotation.py to upload the two gene annotation files to the MySQL database.  Make sure the script and annotation files are in the same directory.
+3. Run the script upload_annotation.py to upload the two gene annotation files to the MySQL database.  Make sure the script and annotation files are in the same directory.  Only run this once.
 ```
 ./upload_annotation.py
 ```
+4. Use the link below to compare the two gene annotation files.  The form.html will gather input, filtering and output options from a user.  These parameters are then send to the XXX.cgi script.  The script connects to the MySQL database and queries the two annotation files.  The results are sent to the results.html template to be displayed.
+      - http://bfx3.aap.jhu.edu/ktodd8/final/form.html
