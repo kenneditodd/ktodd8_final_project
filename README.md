@@ -2,7 +2,7 @@
 The goal of this project is to compare two annotation files.  The Swine Genome Sequencing Consortium (SGSC) has released *Sus scrofa* assembly 11.1.  The Ensembl and NCBI gene annotation files of this assembly will be compared.  The pig genome is not well annotated and there are many genes that do not have any names.  This will highlight the importance of gene annotation selection which will have a great impact on downstream applications such as differential gene expression.
 
 ## Details
-Download the NCBI and Ensembl gene annotation files.  The **upload_annotation.py** script will read in both annotation files, parse them and create new tables in the ktodd8 MySQL database.  Make sure to only run this script once!  The **user_input.html** form will prompt a user to specify the desired information when comparing the two gene annotation files.  The form contents will be sent to the **XXX.cgi** script.  This script will connect to the MySQL database, query the two gene annotation files and report statistics.  The results will be displayed using the **results.html** template.
+Download the NCBI and Ensembl gene annotation files.  The **upload_annotation.py** script will read in both annotation files, parse them and create two new gene tables, Ensembl_Sscrofa and NCBI_Sscrofa, in the ktodd8 MySQL database.  Make sure to only run this script once!  The **form.html** will gather input, filtering and output options from a user.  The form contents will be sent to the **compare_annotations.cgi** script.  This script will connect to the MySQL database, query the two gene annotation files and report summaries and statistics.  The results are sent the **results.html** template to be displayed.  The **format.css** file will aid in formatting for the results.
 
 1. Download *Sus scrofa* gene annotation files from Ensembl and NCBI using the wget command.
 ```
@@ -20,5 +20,5 @@ gunzip *.gz
 ```
 ./upload_annotation.py
 ```
-4. Use the link below to compare the two gene annotation files.  The form.html will gather input, filtering and output options from a user.  These parameters are then send to the compare_annotations.cgi script.  The script connects to the MySQL database and queries the two annotation files.  The results are sent to the results.html template to be displayed.  Format.css helps display the results.
+4. Use the link below to compare the two gene annotation files.
       - http://bfx3.aap.jhu.edu/ktodd8/final/form.html
