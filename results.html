@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel='stylesheet' type='text/css' href='./css/format.css'>
+</head>
+<body>
+
+	<h2>Query results</h2>
+	<p>{{ parameters }}</p>
+	<div class="row">
+		<div class="column" style="background-color:#aaa;">
+			<h2>Ensembl</h2>
+			<p>{{ E_summary }}</p>
+			<p>{{ E_uni }}</p>
+				<ul>
+					{% for i in En_unique %}
+					<li>{{ i }}</li>
+					{% endfor %}
+				</ul>
+		</div>
+		<div class="column" style="background-color:#bbb;">
+			<h2>NCBI</h2>
+			<p>{{ N_summary }}</p>
+			<p>{{ N_uni }}</p>
+				<ul>
+					{% for i in Nc_unique %}
+					<li>{{ i }}</li>
+					{% endfor %}
+				</ul>
+		</div>
+	</div>
+	<p>{{ com }}</p>
+	<ul>
+		{% for i in stats %}
+		<li>{{ i }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
