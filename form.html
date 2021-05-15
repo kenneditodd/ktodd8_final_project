@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Compare <i>Sus scrofa</i> annotation files </h1>
+<p>Compare pig annotation files from Ensembl and NCBI.</p>
+<p>Specify input, filtering and output options below and then click 'Submit'. </p>
+
+<form action="compare_annotations.cgi">
+
+  <p>Input:</p>
+  <input type="radio" id="allGenes" name="group1" value="allGenes">
+  <label for="allGenes">all genes</label><br>
+  <input type="radio" id="allWithName" name="group1" value="allWithName">
+  <label for="allWithName">all genes with a name</label><br>
+  <input type="radio" id="noName" name="group1" value="noName">
+  <label for="noName">all genes with NO name</label><br>
+  
+  <p>Filter:</p>
+  <input type="radio" id="protein" name="protein">
+  <label for="protein">only protein coding genes</label><br>
+
+  <p>Output:</p>
+  <input type="checkbox" id="summarybox" name="summarybox">
+  <label for="summarybox">standard summary</label><br>
+  <input type="checkbox" id="commonGenes" name="commonGenes">
+  <label for="commonGenes">common genes (based on name)</label><br>
+  <input type="checkbox" id="uniqueGenes" name="uniqueGenes">
+  <label for="stats">unique genes (based on name)</label><br><br>
+  <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
