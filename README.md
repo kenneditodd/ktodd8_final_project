@@ -1,4 +1,4 @@
-# JHU_Final_Project
+# JHU Final Project
 The goal of this project is to compare two annotation files.  The Swine Genome Sequencing Consortium (SGSC) has released *Sus scrofa* assembly 11.1.  The Ensembl and NCBI gene annotation files of this assembly will be compared.  The pig genome is not well annotated and there are many genes that do not have any names.  This will highlight the importance of gene annotation selection which will have a great impact on downstream applications such as differential gene expression.
 
 ## Details
